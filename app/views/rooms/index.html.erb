@@ -10,16 +10,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Sakura</td>
-        <td>500</td>
-        <td>Active</td>
-        <td>
-          <button class="btn btn-success">Edit</button>
-          <button class="btn btn-danger">Delete</button>
-        </td>
-      </tr>
+      <% @rooms.each do |room| %>
+          <tr>
+            <td scope="row"><%= room.id %></td>
+            <td><%= room.name %></td>
+            <td><%= room.area %></td>
+            <td><%= room.qty %></td>
+            <td>
+              <%= button_tag "Edit", class: "btn btn-success" %>
+              <%= button_tag "Delete", class: "btn btn-danger" %>
+              <%= link_to "Details", room_path(room), class: "btn btn-primary" %>
+            </td>
+          </tr>
+      <% end %>
     </tbody>
   </table>
 </div>

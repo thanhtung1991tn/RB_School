@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'create sample data for Room'
+Room.destroy_all
+100.times do
+  room = Room.new name: Faker::Name.name, area: Faker::Number.between(1,100), qty: Faker::Number.between(100,1000)
+  room.save validate: false
+end
+puts 'created sample data'
