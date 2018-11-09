@@ -1,0 +1,28 @@
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Area</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Created_at</th>
+        <th scope="col">Updated_at</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><%= @room.id %></th>
+        <td><%= @room.name %></td>
+        <td><%= @room.area %></td>
+        <td><%= @room.qty %></td>
+        <td><%= @room.created_at.strftime("%F") %></td>
+        <td><%= @room.updated_at.strftime("%F") %></td>
+        <td>
+          <%= link_to "Back", rooms_path, class: "btn btn-primary" %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
