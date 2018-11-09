@@ -1,0 +1,8 @@
+en:
+  rooms:
+    show:
+      name_require: Name is required!
+      area_require: Area is required!
+      qty_require: Quantity is required!
+      num_require: Please input number!
+

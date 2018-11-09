@@ -1,0 +1,8 @@
+en:
+  rooms:
+    show:
+      id_not_found: Id not found, please try again!
+    create:
+      create_success: Create successfully!
+      create_fails: Create fails!
+

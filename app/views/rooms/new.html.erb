@@ -1,21 +1,31 @@
-
+<% content_for :validate_new do %>
+  <%= javascript_include_tag "validate" %>
+<% end %>
 <div class="container">
   <div class="row">
-    <%= render "shared/error" %>
-    <%= form_for @room, url: {action: "create"}, html: {class: "form-group"} do |f| %>
+    <%= form_with model: @room, local: true, html: {class: "form-group", id: :new_room} do |f| %>
       <div class="form-group">
-        <label>Name</label>
+        <label><%= t ".name" %></label>
         <%= f.text_field :name, class: "form-control"%>
+        <% if @room.errors[:name].any? %>
+          <i class="text-danger"><%= @room.errors[:name].join("<br>").html_safe %></i>
+        <% end %>
       </div>
       <div class="form-group">
-        <label>Area</label>
+        <label><%= t ".area" %></label>
         <%= f.text_field :area, class: "form-control" %>
+        <% if @room.errors[:area].any? %>
+          <i class="text-danger"><%= @room.errors[:area].join("<br>").html_safe %></i>
+        <% end %>
       </div>
       <div class="form-group">
-        <label>Quantity</label>
+        <label><%= t ".qty" %></label>
         <%= f.text_field :qty, class: "form-control" %>
+        <% if @room.errors[:qty].any? %>
+          <i class="text-danger"><%= @room.errors[:qty].join("<br>").html_safe %></i>
+        <% end %>
       </div>
-      <%= f.submit "create", class: "btn btn-primary" %>
+      <%= f.submit t(".create"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

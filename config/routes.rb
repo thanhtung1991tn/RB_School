@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root "rooms#index"
-  resources :rooms, only: [:index, :show]
+  resources :rooms, except: [:edit, :update]
 end
