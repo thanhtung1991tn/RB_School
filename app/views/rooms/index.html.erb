@@ -3,10 +3,10 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Area</th>
-        <th scope="col">Status</th>
-        <th scope="col">Action</th>
+        <th scope="col"><%= t ".name" %></th>
+        <th scope="col"><%= t ".area" %></th>
+        <th scope="col"><%= t ".qty" %></th>
+        <th scope="col"><%= t ".action" %></th>
       </tr>
     </thead>
     <tbody>
@@ -17,12 +17,13 @@
             <td><%= room.area %></td>
             <td><%= room.qty %></td>
             <td>
-              <%= button_tag "Edit", class: "btn btn-success" %>
-              <%= button_tag "Delete", class: "btn btn-danger" %>
-              <%= link_to "Details", room_path(room), class: "btn btn-primary" %>
+              <%= button_tag t(".edit"), class: "btn btn-success" %>
+              <%= button_tag t(".del"), class: "btn btn-danger" %>
+              <%= link_to t(".detail"), room_path(room), class: "btn btn-primary" %>
             </td>
           </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+

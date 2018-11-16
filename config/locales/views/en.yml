@@ -1,0 +1,38 @@
+en:
+  dictionary:
+    name: &name Name
+    quantity: &quantity Quantity
+    area: &area Area
+    action: &action Action
+    ls: &ls List
+    add: &add Add
+  layouts:
+    menu:
+      ls: *ls
+      add: *add
+    footer:
+      ls: *ls
+      add: *add
+  rooms:
+    index:
+      name: *name
+      area: *area
+      qty: *quantity
+      action: *action
+      edit: Edit
+      del: Delete
+      detail: Details
+    new:
+      name: *name
+      area: *area
+      qty: *quantity
+      create: Create
+    show:
+      name: *name
+      area: *area
+      qty: *quantity
+      create_at: Created_at
+      update_at: Updated_at
+      action: *action
+      back: Back
+
