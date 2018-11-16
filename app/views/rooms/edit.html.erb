@@ -5,7 +5,7 @@
   <div class="row">
     <%= form_with model: @room, local: true, html: {class: "form-group", id: :new_room} do |f| %>
       <%= render "form", frm: f, room: @room %>
-    <%= f.submit t(".create"), class: "btn btn-primary" %>
+      <%= f.submit t(".update"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

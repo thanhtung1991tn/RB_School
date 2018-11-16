@@ -17,7 +17,7 @@
             <td><%= room.area %></td>
             <td><%= room.qty %></td>
             <td>
-              <%= button_tag t(".edit"), class: "btn btn-success" %>
+              <%= link_to t(".edit"), edit_room_path(room), class: "btn btn-success" %>
               <%= button_tag t(".del"), class: "btn btn-danger" %>
               <%= link_to t(".detail"), room_path(room), class: "btn btn-primary" %>
             </td>
