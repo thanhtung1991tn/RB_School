@@ -5,4 +5,9 @@ en:
     create:
       create_success: Create successfully!
       create_fails: Create fails!
+    update:
+      update_success: Update successfully!
+      update_fails: Update fails!
+    edit:
+      id_not_found: Id not found, please try again!
 

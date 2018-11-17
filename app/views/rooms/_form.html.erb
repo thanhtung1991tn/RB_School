@@ -1,0 +1,21 @@
+<div class="form-group">
+  <label><%= t ".name" %></label>
+  <%= frm.text_field :name, class: "form-control"%>
+  <% if room.errors[:name].any? %>
+    <i class="text-danger"><%= room.errors[:name].join("<br>").html_safe %></i>
+  <% end %>
+</div>
+<div class="form-group">
+  <label><%= t ".area" %></label>
+  <%= frm.text_field :area, class: "form-control" %>
+  <% if room.errors[:area].any? %>
+    <i class="text-danger"><%= room.errors[:area].join("<br>").html_safe %></i>
+  <% end %>
+</div>
+<div class="form-group">
+  <label><%= t ".qty" %></label>
+  <%= frm.text_field :qty, class: "form-control" %>
+  <% if room.errors[:qty].any? %>
+    <i class="text-danger"><%= room.errors[:qty].join("<br>").html_safe %></i>
+  <% end %>
+</div>

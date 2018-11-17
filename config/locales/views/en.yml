@@ -35,4 +35,8 @@ en:
       update_at: Updated_at
       action: *action
       back: Back
-
+    edit:
+      name: *name
+      area: *area
+      qty: *quantity
+      update: Update
