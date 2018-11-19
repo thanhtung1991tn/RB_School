@@ -1,0 +1,7 @@
+$(".alert").remove();
+<% if @room %>
+  $("#room-<%= @room.id %>").remove();
+  $(".container").prepend("<div class='alert alert-success'><%= flash[:success] %></div>");
+<% else %>
+  $(".container").prepend("<div class='alert alert-danger'><%= flash[:danger] %></div>");
+<% end %>

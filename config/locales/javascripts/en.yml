@@ -9,4 +9,5 @@ en:
   name_maxlength: Name must be less than 20!
   area_maxlength: Area must be less than 20!
   qty_maxlength: Quantity must be less than 20!
-
+  del_success: Delete Successfully!
+  id_not_found: Id not found!

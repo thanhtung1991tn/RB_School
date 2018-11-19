@@ -1,5 +1,10 @@
 en:
+  dictionary:
+    id_not_found: &id_not_found Id not found, please try again!
   rooms:
+    destroy:
+      del_success: Delete Successfully!
+      id_not_found: *id_not_found
     show:
       id_not_found: Id not found, please try again!
     create:
@@ -9,5 +14,5 @@ en:
       update_success: Update successfully!
       update_fails: Update fails!
     edit:
-      id_not_found: Id not found, please try again!
+      id_not_found: *id_not_found
 
