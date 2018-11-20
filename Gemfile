@@ -19,7 +19,8 @@ gem "bootstrap-sass", "~> 3.3.6"
 gem "jquery-rails"
 gem "jquery-validation-rails"
 gem "i18n-js"
-
+gem "kaminari"
+gem "bootstrap-kaminari-views"
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"

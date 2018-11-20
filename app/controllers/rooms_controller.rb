@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :load_room, except: [:index, :new, :create]
 
   def index
-    @rooms = Room.all
+    @rooms = Room.page(params[:page]).per 10
   end
 
   def show
