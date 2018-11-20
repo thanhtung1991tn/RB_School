@@ -1,3 +1,6 @@
+<% content_for :validate_new do %>
+  <%= javascript_include_tag "validate" %>
+<% end %>
 <div class="container">
   <table class="table">
     <thead>
@@ -11,19 +14,18 @@
     </thead>
     <tbody>
       <% @rooms.each do |room| %>
-          <tr>
-            <td scope="row"><%= room.id %></td>
-            <td><%= room.name %></td>
-            <td><%= room.area %></td>
-            <td><%= room.qty %></td>
-            <td>
-              <%= link_to t(".edit"), edit_room_path(room), class: "btn btn-success" %>
-              <%= button_tag t(".del"), class: "btn btn-danger" %>
-              <%= link_to t(".detail"), room_path(room), class: "btn btn-primary" %>
-            </td>
-          </tr>
+        <tr id="room-<%= room.id %>">
+          <td scope="row"><%= room.id %></td>
+          <td><%= room.name %></td>
+          <td><%= room.area %></td>
+          <td><%= room.qty %></td>
+          <td>
+            <%= link_to t(".edit"), edit_room_path(room), class: "btn btn-success" %>
+            <%= link_to t(".del"), room_path(room), method: :delete, data: {confirm: t(".confirm")}, remote: true, class: "btn btn-danger destroy-room" %>
+            <%= link_to t(".detail"), room_path(room), class: "btn btn-primary" %>
+          </td>
+        </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-

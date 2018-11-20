@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :load_room, only: [:show, :edit, :update]
+  before_action :load_room, except: [:index, :new, :create]
 
   def index
     @rooms = Room.all
@@ -41,6 +41,14 @@ class RoomsController < ApplicationController
     else
       flash.now[:danger] = t ".update_fails"
       render :edit
+    end
+  end
+
+  def destroy
+    if @room && @room.destroy
+      flash.now[:success] = t ".del_success"
+    else
+      flash.now[:danger] = t ".id_not_found"
     end
   end
 

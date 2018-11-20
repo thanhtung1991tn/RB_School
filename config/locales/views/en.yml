@@ -22,6 +22,7 @@ en:
       edit: Edit
       del: Delete
       detail: Details
+      confirm: Are you want to delete?
     new:
       name: *name
       area: *area
@@ -40,3 +41,6 @@ en:
       area: *area
       qty: *quantity
       update: Update
+    destroy:
+      del_success: Delete Successfully!
+      id_not_found: Id not found!
